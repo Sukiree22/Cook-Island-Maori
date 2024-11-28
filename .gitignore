@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Cook Islands Māori - Beginner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        h1, h2 {
+            color: #2a5d84;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .quiz-option {
+            display: block;
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            background-color: #2a5d84;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .quiz-option:hover {
+            background-color: #1e4a67;
+        }
+        .quiz-result {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #2a5d84;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .quiz-option {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Learn Cook Islands Māori</h1>
+
+    <div class="section card" id="phrases">
+        <h2>Common Phrases</h2>
+        <p><strong>Kia Orāna:</strong> Hello</p>
+        <p><strong>Pe'ea koe?</strong> How are you?</p>
+        <p><strong>Meitaki au:</strong> I am good.</p>
+        <p><strong>Ko ai tō'ou ingoa?</strong> What is your name?</p>
+        <p><strong>Ko ... tōku ingoa:</strong> My name is ...</p>
+    </div>
+
+    <div class="section card" id="quiz">
+        <h2>Quiz: Test Your Knowledge</h2>
+        <p>What does "Kia Orāna" mean?</p>
+        <button class="quiz-option" onclick="checkAnswer('hello')">A. Hello</button>
+        <button class="quiz-option" onclick="checkAnswer('goodbye')">B. Goodbye</button>
+        <button class="quiz-option" onclick="checkAnswer('thank you')">C. Thank you</button>
+        
+        <div class="quiz-result" id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswer(answer) {
+            const result = document.getElementById('result');
+            if (answer === 'hello') {
+                result.textContent = 'Correct! "Kia Orāna" means Hello.';
+            } else {
+                result.textContent = 'Oops! The correct answer is A. Hello.';
+            }
+        }
+    </script>
+
+</body>
+</html>
